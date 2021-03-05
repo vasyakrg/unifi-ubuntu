@@ -13,7 +13,7 @@ keytool -importkeystore -noprompt -deststorepass aircontrolenterprise -destkeypa
 service unifi stop
 service unifi start
 
-[ ! -z ${ALARM_KEY} ] {
+[ ! -z ${ALARM_KEY} ] && {
   for i in {1..10}
   do
     CODE=$(curl -L -sw '%{http_code}' --connect-timeout 5 --max-time 30 "https://${DOMAIN}:8443" -o /dev/null)
