@@ -16,10 +16,11 @@ service unifi start
 [ ! -z ${ALARM_KEY} ] && {
   for i in {1..10}
   do
-    CODE=$(curl -L -sw '%{http_code}' --connect-timeout 5 --max-time 30 "https://${DOMAIN}:8443" -o /dev/null)
+    CODE=$(curl -L -sw '%{http_code}' --connect-timeout 5 --max-time 30 --cacert /etc/letsencrypt/live/${DOMAIN}/chain.pem "https://${DOMAIN}:8443" -o /dev/null)
     [[ ${CODE} == 200 ]] && {
       curl -fsS -m 10 --retry 5 -o /dev/null https://hc-ping.com/${ALARM_KEY}
       break
     }
+  sleep 10
   done
 }
