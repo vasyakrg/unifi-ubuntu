@@ -10,5 +10,7 @@ openssl pkcs12 -export -in $crt -inkey $key -out cloudkey.p12 -name unifi -CAfil
 
 keytool -importkeystore -noprompt -deststorepass aircontrolenterprise -destkeypass aircontrolenterprise -destkeystore /usr/lib/unifi/data/keystore -srckeystore cloudkey.p12 -srcstoretype PKCS12 -srcstorepass aircontrolenterprise -alias unifi
 
+true
+
 service unifi stop
 service unifi start
