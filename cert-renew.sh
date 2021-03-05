@@ -1,12 +1,6 @@
 #!/bin/bash
 
-DOMAIN=${1}
-
-[ -z ${DOMAIN} ] && {
-  echo "Usage: ./cert-renew.sh <you domain>"
-  echo "Example: ./cert-renew.sh unifi-test.mydomain.com"
-  exit 1
-}
+source .env
 
 ca=/etc/letsencrypt/live/${DOMAIN}/chain.pem
 crt=/etc/letsencrypt/live/${DOMAIN}/cert.pem

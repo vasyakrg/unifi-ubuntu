@@ -8,6 +8,8 @@ DOMAIN=$1
   exit 1
 }
 
+echo "DOMAIN=${DOMAIN}" > .env
+
 add-apt-repository -y ppa:certbot/certbot
 apt-get update
 apt-get install -y certbot
@@ -17,7 +19,8 @@ certbot certonly --agree-tos --no-eff-email --standalone --preferred-challenges 
   echo "0 6 1 * * /usr/bin/certbot renew" | crontab -
 
   cp cert-renew.sh /etc/letsencrypt/renewal-hooks/post/
-  echo "renew_hook = /etc/letsencrypt/renewal-hooks/post/cert-renew.sh ${DOMAIN}" >> /etc/letsencrypt/renewal/${DOMAIN}.conf
+  echo "DOMAIN=${DOMAIN}" > /etc/letsencrypt/renewal-hooks/post/.env
+  echo "renew_hook = /etc/letsencrypt/renewal-hooks/post/cert-renew.sh" >> /etc/letsencrypt/renewal/${DOMAIN}.conf
 
-  ./cert-renew.sh ${DOMAIN}
+  ./cert-renew.sh
 }
