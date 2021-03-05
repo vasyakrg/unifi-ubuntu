@@ -2,7 +2,7 @@
 
 DOMAIN=$1
 
-[ -z ${DOMAIN}] && {
+[ -z ${DOMAIN} ] && {
   echo "Usage: ./cert-install.sh <you domain>"
   echo "Example: ./cert-install.sh unifi-test.mydomain.com"
   exit 1
