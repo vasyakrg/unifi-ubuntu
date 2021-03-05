@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source .env
+source /etc/letsencrypt/renewal-hooks/post/.env
 
 ca=/etc/letsencrypt/live/${DOMAIN}/chain.pem
 crt=/etc/letsencrypt/live/${DOMAIN}/cert.pem

@@ -8,8 +8,6 @@ DOMAIN=$1
   exit 1
 }
 
-echo "DOMAIN=${DOMAIN}" > .env
-
 add-apt-repository -y ppa:certbot/certbot
 apt-get update
 apt-get install -y certbot
