@@ -12,10 +12,10 @@ add-apt-repository -y ppa:certbot/certbot
 apt-get update
 apt-get install -y certbot
 
-certbot certonly --standalone --preferred-challenges http -d ${DOMAIN} && {
+certbot certonly --agree-tos --no-eff-email --standalone --preferred-challenges http -d ${DOMAIN} && {
 
   echo "0 6 1 * * /usr/bin/certbot renew" | crontab -
-  echo "renew_hook = $(pwd)/cert-renew.sh" >> /etc/letsencrypt/renewal/${DOMAIN}.conf
+  echo "renew_hook = $(pwd)/cert-renew.sh ${DOMAIN}" >> /etc/letsencrypt/renewal/${DOMAIN}.conf
 
-  ./cert-renew.sh
+  ./cert-renew.sh ${DOMAIN}
 }
