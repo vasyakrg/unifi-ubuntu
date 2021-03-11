@@ -2,6 +2,7 @@
 
 ## Ubuntu Server
 - install ubuntu server 20.04
+- create domain name <unifi.your-domain.com> and link with ip of server
 
 ## Install Unifi
 
