@@ -19,3 +19,14 @@
 ```
 ./cert-install.sh <you domain> <alarm-key>
 ```
+
+
+## Видео к курсу
+- [видео]()
+- [презентация](https://drive.google.com/file/d/1BYhYtjVdPCbBO-vtPyotYhay2IWOPiZ4/view?usp=sharing)
+
+##### Автор
+- **Vassiliy Yegorov** [vasyakrg](https://github.com/vasyakrg)
+- [сайт](https://vk.com/realmanual)
+- [youtube](https://youtube.com/realmanual)
+- [группа в телеге](https://t.me/realmanual_group)
