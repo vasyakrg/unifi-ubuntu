@@ -14,7 +14,7 @@
 ## Certificates
 
 - Install certbot and create certificate (and setup alarm)
-- <alarm-key> not necessary (include from [healthchecks.io](https://healthchecks.io))
+- `alarm-key` not necessary (include from [healthchecks.io](https://healthchecks.io))
 
 ```
 ./cert-install.sh <you domain> <alarm-key>
