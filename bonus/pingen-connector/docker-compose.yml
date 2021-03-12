@@ -5,7 +5,7 @@ services:
     image: vasyakrg/unifi-pin-connector
     container_name: unifi_connector
     ports:
-    - 8090:80
+    - ${PORT}:80
     networks:
       - unifi_connector_net
 

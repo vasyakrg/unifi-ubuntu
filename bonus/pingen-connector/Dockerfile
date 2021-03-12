@@ -1,5 +1,7 @@
 FROM php:7.4-apache-buster
 
+ARG PORT=8090
+
 COPY app/ /var/www/html
 
 RUN rm /etc/apache2/sites-enabled/*
