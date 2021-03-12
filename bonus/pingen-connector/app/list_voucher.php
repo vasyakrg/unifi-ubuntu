@@ -15,14 +15,21 @@ require_once('vendor/autoload.php');
  * include the config file (place your credentials etc. there if not already present)
  * see the config.template.php file for an example
  */
-require_once('config.php');
+// require_once('config.php');
+
+$controlleruser = $_REQUEST['controlleruser'];
+$controllerpassword = $_REQUEST['controllerpassword'];
+$controllerurl = $_REQUEST['controllerurl'];
+$site_id = $_REQUEST['site_id'];
+$controllerversion = $_REQUEST['controllerversion'];
+
+if ($_REQUEST['debug'] == 'true')  $debug = true;
+if ($_REQUEST['debug'] == 'false') $debug = false;
 
 /**
  * The site where you want to create the voucher(s)
  */
 $time_create = $_REQUEST['time_create'];
-$note = $_REQUEST['note'];
-$site_id = 'default';
 
 /**
  * initialize the UniFi API connection class and log in to the controller
