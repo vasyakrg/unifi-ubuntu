@@ -2,6 +2,9 @@
 
 source /etc/letsencrypt/renewal-hooks/post/.env
 
+# нужно, что бы обновлялись Let's CA
+update-ca-certificates --fresh
+
 ca=/etc/letsencrypt/live/${DOMAIN}/chain.pem
 crt=/etc/letsencrypt/live/${DOMAIN}/cert.pem
 key=/etc/letsencrypt/live/${DOMAIN}/privkey.pem

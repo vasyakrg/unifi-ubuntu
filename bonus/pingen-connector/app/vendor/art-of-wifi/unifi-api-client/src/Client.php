@@ -23,9 +23,9 @@ class Client
     /**
      * private properties
      */
-    protected $baseurl            = 'https://192.168.81.56:8443';
+    protected $baseurl            = 'https://localhost:8443';
     protected $site               = 'default';
-    protected $version            = '5.8.23';
+    protected $version            = '6.0.48';
     protected $debug              = false;
     protected $is_loggedin        = false;
     private $cookies              = '';
@@ -99,10 +99,9 @@ class Client
         $ch = $this->get_curl_obj();
 
         curl_setopt($ch, CURLOPT_HEADER, 1);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_REFERER, $this->baseurl.'/login');
         curl_setopt($ch, CURLOPT_URL, $this->baseurl.'/api/login');
+
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['username' => $this->user, 'password' => $this->password]));
 
         /**
