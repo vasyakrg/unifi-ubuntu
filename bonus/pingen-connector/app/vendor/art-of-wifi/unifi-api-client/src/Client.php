@@ -99,6 +99,8 @@ class Client
         $ch = $this->get_curl_obj();
 
         curl_setopt($ch, CURLOPT_HEADER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($ch, CURLOPT_REFERER, $this->baseurl.'/login');
         curl_setopt($ch, CURLOPT_URL, $this->baseurl.'/api/login');
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(['username' => $this->user, 'password' => $this->password]));
