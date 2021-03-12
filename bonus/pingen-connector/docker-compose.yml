@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  unifi-connector:
+    restart: always
+    image: vasyakrg/unifi-pin-connector
+    container_name: unifi_connector
+    ports:
+    - 8090:80
+    networks:
+      - unifi_connector_net
+
+networks:
+  unifi_connector_net:
+    name: unifi_connector_net
