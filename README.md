@@ -22,7 +22,7 @@
 
 
 ## Видео к курсу
-- [видео]()
+- [видео](https://youtu.be/V9wPixm8iyc)
 - [презентация](https://drive.google.com/file/d/1BYhYtjVdPCbBO-vtPyotYhay2IWOPiZ4/view?usp=sharing)
 
 ##### Автор
