@@ -21,6 +21,10 @@
 ```
 
 
+## Бонус
+- [коннектор для API](bonus/pingen-connector/README.md)
+- [утилита для выдачи ваучеров](bonus/pingen-executor/README.md)
+
 ## Видео к курсу
 - [видео](https://youtu.be/V9wPixm8iyc)
 - [презентация](https://drive.google.com/file/d/1BYhYtjVdPCbBO-vtPyotYhay2IWOPiZ4/view?usp=sharing)
