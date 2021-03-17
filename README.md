@@ -22,8 +22,8 @@
 
 
 ## Бонус
-- [коннектор для API](bonus/pingen-connector/README.md)
-- [утилита для выдачи ваучеров](bonus/pingen-executor/README.md)
+- [коннектор для API](https://github.com/vasyakrg/unifi-ubuntu/tree/master/bonus/pingen-connector)
+- [утилита для выдачи ваучеров](https://github.com/vasyakrg/unifi-ubuntu/tree/master/bonus/pingen-executor)
 
 ## Видео к курсу
 - [видео](https://youtu.be/V9wPixm8iyc)
